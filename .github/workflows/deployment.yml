@@ -8,6 +8,19 @@ jobs:
     - uses: actions/checkout@master
     - name: liboggBuildActions
       uses: ./
+    - uses: montudor/action-zip@v0.1.0
+      with: 
+        args: zip -qq -r ${{ github.workspace }}/libogg-ogv.js ${{ github.workspace }}/build/js/root
+    - uses: bpicode/github-action-upload-bintray@master
+      with:
+        file: ${{ github.workspace }}/libogg-ogv.js
+        api_user: daemoohn
+        api_key: ${{ secrets.BINTRAY_API_KEY }}
+        repository_user: daemoohn
+        repository_name: libogg-ogv.js
+        package: libogg-ogv.js
+        version: '1.0'
+        publish: 1
     - uses: actions/upload-artifact@master
       with:
         name: libogg-ogv.js 

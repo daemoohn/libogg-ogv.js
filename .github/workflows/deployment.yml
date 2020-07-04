@@ -1,0 +1,9 @@
+on: deployment
+name: Build libogg
+jobs:
+  liboggBuildActions:
+    name: liboggBuildActions
+    runs-on: ubuntu-20.04
+    steps:
+    - name: liboggBuildActions
+      uses: ./

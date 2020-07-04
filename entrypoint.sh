@@ -14,6 +14,7 @@ fi
 cd ..
 
 ## compileOggJs.sh
+dir=`pwd`
 
 # set up the build directory
 mkdir -p build

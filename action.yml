@@ -1,0 +1,5 @@
+name: "Build libogg Action"
+author: "daemoohn"
+runs:
+  using: "docker"
+  image: "Dockerfile

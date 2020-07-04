@@ -1,12 +1,9 @@
 on: deployment
 name: Build libogg
 jobs:
-  liboggBuildActions:
+  build:
     name: liboggBuildActions
     runs-on: ubuntu-20.04
-    container:
-      volumes: 
-        - /github/workspace:/github/workspace
     steps:
     - uses: actions/checkout@master
     - name: liboggBuildActions

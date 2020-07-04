@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # getting the source code
+pwd
 git clone https://gitlab.xiph.org/xiph/ogg.git
 
 # configureOgg.sh
@@ -11,10 +12,12 @@ if [ ! -f configure ]; then
   sed -i.bak 's/$srcdir\/configure/#/' autogen.sh
   ./autogen.sh
 fi
+cd ..
 
 # compileOggJs.sh
 
 # set up the build directory
+pwd
 mkdir -p build
 cd build
 
@@ -25,6 +28,7 @@ mkdir -p root
 mkdir -p libogg
 cd libogg
 
+pwd
 # finally, run configuration script
 emconfigure ../../../ogg/configure \
     --prefix="$dir/build/js/root" \

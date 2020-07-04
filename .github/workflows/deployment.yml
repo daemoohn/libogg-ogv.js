@@ -1,8 +1,8 @@
 on: deployment
 name: Build libogg
 jobs:
-  build:
-    name: liboggBuildActions
+  buildAndUploadArtifact:
+    name: buildAndUploadArtifact
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@master
@@ -11,4 +11,4 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: libogg-ogv.js 
-        path: /github/workspace/build/js/libogg
+        path: ./github/workspace/build/js/libogg

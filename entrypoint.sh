@@ -26,7 +26,7 @@ mkdir -p libogg
 cd libogg
 
 # finally, run configuration script
-emconfigure ../../../libogg/configure \
+emconfigure ../../../ogg/configure \
     --prefix="$dir/build/js/root" \
     --disable-shared \
 || exit 1

@@ -8,15 +8,3 @@ jobs:
     - uses: actions/checkout@master
     - name: liboggBuildActions
       uses: ./
-    - run: ls -R
-      working-directory: ${{ github.workspace }}
-    - uses: bpicode/github-action-upload-bintray@master
-      with:
-        file: ./github/workspace/libogg-ogv.js.zip
-        api_user: daemoohn
-        api_key: ${{ secrets.BINTRAY_API_KEY }}
-        repository_user: daemoohn
-        repository_name: libogg-ogv.js
-        package: libogg-ogv.js
-        version: '1.0'
-        publish: 1

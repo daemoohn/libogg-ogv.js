@@ -10,10 +10,10 @@ jobs:
       uses: ./
     - uses: montudor/action-zip@v0.1.0
       with: 
-        args: zip -qq -r ${{ github.workspace }}/libogg-ogv.js ${{ github.workspace }}/build/js/root
+        args: zip -qq -r ${{ github.workspace }}/libogg-ogv.js.zip ${{ github.workspace }}/build/js/root
     - uses: bpicode/github-action-upload-bintray@master
       with:
-        file: ${{ github.workspace }}/libogg-ogv.js
+        file: ${{ github.workspace }}/libogg-ogv.js.zip
         api_user: daemoohn
         api_key: ${{ secrets.BINTRAY_API_KEY }}
         repository_user: daemoohn

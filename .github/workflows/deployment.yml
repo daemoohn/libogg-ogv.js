@@ -7,4 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: liboggBuildActions
+      env: 
+        BINTRAY_API_USER: ${{ secrets.BINTRAY_API_USER }}
+        BINTRAY_API_KEY: ${{ secrets.BINTRAY_API_KEY }}
       uses: ./

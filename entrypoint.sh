@@ -36,3 +36,6 @@ emconfigure ../../../ogg/configure \
 # compile libogg
 emmake make -j4 || exit 1
 emmake make install || exit 1
+
+cd $dir
+zip -r libogg-ogv.js.zip $dir/build/js/root 

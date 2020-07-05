@@ -8,6 +8,16 @@ jobs:
     - uses: actions/checkout@master
     - name: liboggBuildActions
       uses: ./
+    - uses: actions/upload-artifact@master
+      with:
+        name: libogg-ogv.js 
+        path: ${{ github.workspace }}/build/js/root
+    - uses: actions/download-artifact@master
+      with:
+        name: libogg-ogv.js
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: ${{ github.workspace }}
     - uses: montudor/action-zip@v0.1.0
       with: 
         args: zip -qq -r ${{ github.workspace }}/libogg-ogv.js.zip ${{ github.workspace }}/build/js/root

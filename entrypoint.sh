@@ -38,4 +38,7 @@ emmake make -j4 || exit 1
 emmake make install || exit 1
 
 cd $dir
+
+## upload to bintray
 zip -r libogg-ogv.js.zip $dir/build/js/root 
+curl -T libogg-ogv.js.zip -u$1:$2 https://api.bintray.com/content/daemoohn/libogg-ogv.js/libogg-ogv.js/1.0?publish=1

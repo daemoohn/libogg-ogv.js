@@ -12,7 +12,7 @@ jobs:
       working-directory: ${{ github.workspace }}
     - uses: bpicode/github-action-upload-bintray@master
       with:
-        file: ${{ github.workspace }}/libogg-ogv.js.zip
+        file: ./github/workspace/libogg-ogv.js.zip
         api_user: daemoohn
         api_key: ${{ secrets.BINTRAY_API_KEY }}
         repository_user: daemoohn

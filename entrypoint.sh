@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## getting the source code
 git clone https://gitlab.xiph.org/xiph/ogg.git
@@ -11,7 +11,7 @@ cd ..
 ## verify if this specific version has already been uploaded to bintray
 bintray_response=`curl -u$1:$2 https://api.bintray.com/packages/daemoohn/libogg-ogv.js/libogg-ogv.js/versions/$version`
 echo "$bintray_response"
-if [ $bintray_response != *""Version '$version' was not found""* ]; then
+if [[ $bintray_response != *""Version '$version' was not found""* ]]; then
   echo "libogg version $version is already present on bintray!"
   exit 1
 fi

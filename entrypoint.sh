@@ -41,4 +41,4 @@ cd $dir
 
 ## upload to bintray
 zip -r libogg-ogv.js.zip $dir/build/js/root 
-curl -T libogg-ogv.js.zip -u$1:$2 https://api.bintray.com/content/daemoohn/libogg-ogv.js/libogg-ogv.js/1.0?publish=1
+curl -T libogg-ogv.js.zip -u$1:$2 https://api.bintray.com/content/daemoohn/libogg-ogv.js/libogg-ogv.js/1.0/libogg-ogv.js.zip?publish=1

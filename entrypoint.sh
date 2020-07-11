@@ -16,7 +16,6 @@ if [[ $bintray_response != *"Version '$version' was not found"* ]]; then
 fi
 
 ## configureOgg.sh
-
 cd ogg
 if [ ! -f configure ]; then
   # generate configuration script
